@@ -5,7 +5,8 @@
  */
 package gyam;
 
-import javax.swing.JOptionPane;
+import conexion.Conexion;
+import java.sql.Connection;
 
 /**
  *
@@ -19,8 +20,6 @@ public class InicioSesion extends javax.swing.JFrame {
     public InicioSesion() {
         initComponents();
     }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -101,9 +100,7 @@ public class InicioSesion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingresarActionPerformed
-        /*Home abrir = new Home();
-        abrir.setVisible(true);
-        this.setVisible(false);*/
+             
     }//GEN-LAST:event_btn_ingresarActionPerformed
 
     /**
@@ -157,4 +154,7 @@ public class InicioSesion extends javax.swing.JFrame {
     private javax.swing.JPasswordField pf_contraseña;
     private javax.swing.JTextField tf_usuario;
     // End of variables declaration//GEN-END:variables
+
+    Conexion cc = new Conexion();
+    Connection cn= cc.getConnection();
 }
