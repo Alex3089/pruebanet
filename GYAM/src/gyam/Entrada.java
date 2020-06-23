@@ -27,14 +27,78 @@ public class Entrada extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        btn_iniciarSesion = new javax.swing.JButton();
+        btn_registrarse = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 80));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/IMG-20200507-WA0068.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 190, 90));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo.itescham.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 240, 90));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fn_blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1000, 90));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fn_blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 1000, 60));
+
+        jLabel6.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
+        jLabel6.setText("BIENVENIDO AL SISTEMA DE CONTROL DE DOCENTES");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, -1));
+
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 110, 100));
+
+        btn_iniciarSesion.setBackground(new java.awt.Color(153, 255, 153));
+        btn_iniciarSesion.setText("INICIAR SESIÓN");
+        btn_iniciarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_iniciarSesionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_iniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 130, 30));
+
+        btn_registrarse.setBackground(new java.awt.Color(153, 255, 153));
+        btn_registrarse.setText("REGISTRARSE");
+        btn_registrarse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_registrarseActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 130, 30));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo-blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 290, 270));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo_azul.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_iniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarSesionActionPerformed
+        InicioSesion abrir = new InicioSesion();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btn_iniciarSesionActionPerformed
+
+    private void btn_registrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarseActionPerformed
+        Registro abrir = new Registro();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btn_registrarseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -72,6 +136,15 @@ public class Entrada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_iniciarSesion;
+    private javax.swing.JButton btn_registrarse;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 }

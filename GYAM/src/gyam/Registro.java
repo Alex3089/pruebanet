@@ -5,6 +5,14 @@
  */
 package gyam;
 
+import conexion.Conexion;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL
@@ -27,21 +35,168 @@ public class Registro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        tf_numeroControl = new javax.swing.JTextField();
+        tf_nombre = new javax.swing.JTextField();
+        tf_apellidoPat = new javax.swing.JTextField();
+        tf_apellidoMat = new javax.swing.JTextField();
+        tf_fechaNac = new javax.swing.JTextField();
+        tf_correo = new javax.swing.JTextField();
+        tf_telefono = new javax.swing.JTextField();
+        tf_nomUsuario = new javax.swing.JTextField();
+        pf_contraseña = new javax.swing.JPasswordField();
+        btn_regresar = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        btn_registrarse = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        jLabel6.setText("REGISTRO");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel8.setText("Nombre");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel9.setText("Apellido paterno");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel10.setText("Apellido materno");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel11.setText("Correo institucional");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel12.setText("Teléfono");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel13.setText("Fecha de nacimiento");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel14.setText("Numero de control");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
+        getContentPane().add(tf_numeroControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 220, 30));
+        getContentPane().add(tf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 220, -1));
+        getContentPane().add(tf_apellidoPat, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 220, -1));
+        getContentPane().add(tf_apellidoMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 220, -1));
+        getContentPane().add(tf_fechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 220, 30));
+        getContentPane().add(tf_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 220, -1));
+        getContentPane().add(tf_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 220, -1));
+        getContentPane().add(tf_nomUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, 200, -1));
+        getContentPane().add(pf_contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 270, 200, -1));
+
+        btn_regresar.setBackground(new java.awt.Color(153, 255, 153));
+        btn_regresar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_regresar.setText("REGRESAR");
+        btn_regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_regresarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 390, 100, 30));
+
+        jLabel15.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel15.setText("Nombre de usuario");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, -1, -1));
+
+        jLabel16.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel16.setText("Contraseña");
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, -1, -1));
+
+        btn_registrarse.setBackground(new java.awt.Color(153, 255, 153));
+        btn_registrarse.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_registrarse.setText("REGISTRARSE");
+        btn_registrarse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_registrarseActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 390, -1, 30));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo-blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 770, 330));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fn_blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 1000, 60));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo.itescham.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 240, 90));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/IMG-20200507-WA0068.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 190, 90));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fn_blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1000, 90));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo_azul.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_registrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarseActionPerformed
+        String numControl, nombre, ape_pat, ape_mat, fechaNac, correo, telefono, nomUsuario, contraseña;
+        String sql = "";
+      
+        numControl = tf_numeroControl.getText();
+        nombre = tf_nombre.getText();
+        ape_pat = tf_apellidoPat.getText();
+        ape_mat = tf_apellidoMat.getText();
+        fechaNac = tf_fechaNac.getText();
+        correo = tf_correo.getText();
+        telefono = tf_telefono.getText();
+        nomUsuario = tf_nomUsuario.getText();
+        contraseña = pf_contraseña.getText();
+    
+        sql = "INSERT INTO Registros(Num_Control,Nombre,Apellido_Paterno,Apellido_Materno,Fecha_Nacimiento,Correo_Institucional,Teléfono,Nombre_usuario,Contraseña) VALUES (?,?,?,?,?,?,?,?,?)";
+            try {
+                PreparedStatement pst  = cn.prepareStatement(sql);
+                pst.setString(1, numControl);
+                pst.setString(2, nombre);
+                pst.setString(3, ape_pat);
+                pst.setString(4, ape_mat);
+                pst.setString(5, fechaNac);
+                pst.setString(6, correo);   
+                pst.setString(7, telefono);  
+                pst.setString(8, nomUsuario);  
+                pst.setString(9, contraseña);  
+
+                int n = pst.executeUpdate();
+                if(n > 0){
+                JOptionPane.showMessageDialog(null, "Registro guardado con éxito");
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    }//GEN-LAST:event_btn_registrarseActionPerformed
+
+    private void btn_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_regresarActionPerformed
+        InicioSesion abrir = new InicioSesion();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btn_regresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +234,35 @@ public class Registro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_registrarse;
+    private javax.swing.JButton btn_regresar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPasswordField pf_contraseña;
+    private javax.swing.JTextField tf_apellidoMat;
+    private javax.swing.JTextField tf_apellidoPat;
+    private javax.swing.JTextField tf_correo;
+    private javax.swing.JTextField tf_fechaNac;
+    private javax.swing.JTextField tf_nomUsuario;
+    private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_numeroControl;
+    private javax.swing.JTextField tf_telefono;
     // End of variables declaration//GEN-END:variables
+
+    Conexion cc = new Conexion();
+    Connection cn= cc.getConnection();
 }

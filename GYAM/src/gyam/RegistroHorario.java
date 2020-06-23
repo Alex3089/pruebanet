@@ -5,6 +5,14 @@
  */
 package gyam;
 
+import conexion.Conexion;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author DELL
@@ -27,21 +35,154 @@ public class RegistroHorario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        tf_numeroControl = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        tf_nombre = new javax.swing.JTextField();
+        tf_apePat = new javax.swing.JTextField();
+        tf_apeMat = new javax.swing.JTextField();
+        cb_dia = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        btn_buscar = new javax.swing.JButton();
+        tf_hora = new javax.swing.JTextField();
+        tf_materia = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        cb_carrera = new javax.swing.JComboBox<>();
+        btn_guardar = new javax.swing.JButton();
+        btn_editar = new javax.swing.JButton();
+        btn_actualizar = new javax.swing.JButton();
+        btn_eliminar = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tb_horario = new javax.swing.JTable();
+        jLabel4 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fn_blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 1000, 60));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo.itescham.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 240, 90));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/IMG-20200507-WA0068.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 190, 90));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fn_blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1000, 90));
+
+        jLabel6.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        jLabel6.setText("REGISTRO DE HORARIOS");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel8.setText("Numero de control");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+        getContentPane().add(tf_numeroControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 120, 30));
+
+        jLabel9.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel9.setText("Nombre");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
+        getContentPane().add(tf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 250, -1));
+        getContentPane().add(tf_apePat, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 120, -1));
+        getContentPane().add(tf_apeMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 130, -1));
+
+        cb_dia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado" }));
+        getContentPane().add(cb_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 140, -1));
+
+        jLabel10.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel10.setText("Día");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel11.setText("Hora");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
+
+        btn_buscar.setBackground(new java.awt.Color(153, 255, 153));
+        btn_buscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/search.png"))); // NOI18N
+        btn_buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 50, 30));
+        getContentPane().add(tf_hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 140, -1));
+        getContentPane().add(tf_materia, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 240, -1));
+
+        jLabel13.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel13.setText("Carrera");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel12.setText("Materia");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
+
+        cb_carrera.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Ing. Ambiental", "Ing. en Administración", "Ing. en Electromecánica", "Ing. en Gestión Empresarial", "Ing. en Logística", "Ing. en Sistemas Computacionales", "Lic. en Turismo" }));
+        getContentPane().add(cb_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 240, -1));
+
+        btn_guardar.setBackground(new java.awt.Color(153, 255, 153));
+        btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/guardar.png"))); // NOI18N
+        getContentPane().add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 70, 50));
+
+        btn_editar.setBackground(new java.awt.Color(153, 255, 153));
+        btn_editar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/editar.png"))); // NOI18N
+        getContentPane().add(btn_editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 70, 50));
+
+        btn_actualizar.setBackground(new java.awt.Color(153, 255, 153));
+        btn_actualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/modificar_1.png"))); // NOI18N
+        getContentPane().add(btn_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 70, 50));
+
+        btn_eliminar.setBackground(new java.awt.Color(153, 255, 153));
+        btn_eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar_1.png"))); // NOI18N
+        getContentPane().add(btn_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 70, 50));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo-blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 350, 330));
+
+        tb_horario.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tb_horario);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 590, 330));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo_azul.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
+        String mostrar = "SELECT Nombre,Apellido_Paterno,Apellido_Materno FROM Registros WHERE Num_Control='"+tf_numeroControl.getText()+"'" ;
+        try {
+                  Statement st = cn.createStatement();
+                  ResultSet rs = st.executeQuery(mostrar);
+                  while(rs.next())
+                  {
+                      tf_nombre.setText(rs.getString("Nombre"));
+                      tf_apePat.setText(rs.getString("Apellido_Paterno"));
+                      tf_apeMat.setText(rs.getString("Apellido_Materno"));
+                  }
+        } catch (SQLException ex) {
+            Logger.getLogger(RegistroHorario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btn_buscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +220,36 @@ public class RegistroHorario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_actualizar;
+    private javax.swing.JButton btn_buscar;
+    private javax.swing.JButton btn_editar;
+    private javax.swing.JButton btn_eliminar;
+    private javax.swing.JButton btn_guardar;
+    private javax.swing.JComboBox<String> cb_carrera;
+    private javax.swing.JComboBox<String> cb_dia;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tb_horario;
+    private javax.swing.JTextField tf_apeMat;
+    private javax.swing.JTextField tf_apePat;
+    private javax.swing.JTextField tf_hora;
+    private javax.swing.JTextField tf_materia;
+    private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_numeroControl;
     // End of variables declaration//GEN-END:variables
+
+    Conexion cc = new Conexion();
+    Connection cn= cc.getConnection();
 }

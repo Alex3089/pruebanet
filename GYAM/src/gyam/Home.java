@@ -27,21 +27,93 @@ public class Home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        btn_horarios = new javax.swing.JButton();
+        btn_controlGeneral = new javax.swing.JButton();
+        btn_reportes = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fn_blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 1000, 60));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo.itescham.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 240, 90));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/IMG-20200507-WA0068.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 190, 90));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fn_blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1000, 90));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/banner-licenciaturas-uh.jpg"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 1000, 310));
+
+        btn_horarios.setBackground(new java.awt.Color(153, 255, 153));
+        btn_horarios.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_horarios.setText("HORARIOS");
+        btn_horarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_horariosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_horarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 120, 150, 30));
+
+        btn_controlGeneral.setBackground(new java.awt.Color(153, 255, 153));
+        btn_controlGeneral.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_controlGeneral.setText("CONTROL GENERAL");
+        btn_controlGeneral.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_controlGeneralActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_controlGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 120, -1, 30));
+
+        btn_reportes.setBackground(new java.awt.Color(153, 255, 153));
+        btn_reportes.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_reportes.setText("REPORTES");
+        btn_reportes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_reportesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 120, 150, 30));
+
+        jLabel6.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        jLabel6.setText("BIENVENIDO AL SISTEMA DE CONTROL DE DOCENTES");
+        jLabel6.setToolTipText("");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo_azul.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_horariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_horariosActionPerformed
+        RegistroHorario abrir = new RegistroHorario(); 
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btn_horariosActionPerformed
+
+    private void btn_controlGeneralActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_controlGeneralActionPerformed
+        ControlGeneral abrir = new ControlGeneral(); 
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btn_controlGeneralActionPerformed
+
+    private void btn_reportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_reportesActionPerformed
+        Reportes abrir = new Reportes();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btn_reportesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +151,16 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_controlGeneral;
+    private javax.swing.JButton btn_horarios;
+    private javax.swing.JButton btn_reportes;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
+
 }
