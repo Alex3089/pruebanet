@@ -123,7 +123,7 @@ public class RegistroHorario extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         jLabel6.setText("REGISTRO DE HORARIOS");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
         jLabel8.setText("Numero de control");
@@ -137,7 +137,7 @@ public class RegistroHorario extends javax.swing.JFrame {
         tf_nombre.setName(""); // NOI18N
         getContentPane().add(tf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 140, 30));
         getContentPane().add(tf_apePat, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 90, -1));
-        getContentPane().add(tf_apeMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 90, -1));
+        getContentPane().add(tf_apeMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 100, -1));
 
         cb_dia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado" }));
         getContentPane().add(cb_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 110, 30));
@@ -152,8 +152,8 @@ public class RegistroHorario extends javax.swing.JFrame {
 
         jLabel16.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
         jLabel16.setText("Num.Aula");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
-        getContentPane().add(tf_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 70, -1));
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, -1, -1));
+        getContentPane().add(tf_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 70, -1));
 
         btn_buscar.setBackground(new java.awt.Color(153, 255, 153));
         btn_buscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/search.png"))); // NOI18N
@@ -164,8 +164,8 @@ public class RegistroHorario extends javax.swing.JFrame {
         });
         getContentPane().add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 50, 30));
         getContentPane().add(tf_horaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 70, -1));
-        getContentPane().add(tf_horaTermino, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 70, -1));
-        getContentPane().add(tf_materia, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 260, -1));
+        getContentPane().add(tf_horaTermino, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 70, -1));
+        getContentPane().add(tf_materia, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 280, -1));
         getContentPane().add(tf_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 140, -1));
 
         jLabel13.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
@@ -183,10 +183,10 @@ public class RegistroHorario extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
         jLabel14.setText("Hora término");
         jLabel14.setToolTipText("");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, -1, -1));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
 
         cb_carrera.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Ing. Ambiental", "Ing. en Administración", "Ing. en Electromecánica", "Ing. en Gestión Empresarial", "Ing. en Logística", "Ing. en Sistemas Computacionales", "Lic. en Turismo" }));
-        getContentPane().add(cb_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 260, 30));
+        getContentPane().add(cb_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 280, 30));
 
         btn_guardar.setBackground(new java.awt.Color(153, 255, 153));
         btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/guardar.png"))); // NOI18N
@@ -195,7 +195,7 @@ public class RegistroHorario extends javax.swing.JFrame {
                 btn_guardarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 70, 50));
+        getContentPane().add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 70, 50));
 
         btn_editar.setBackground(new java.awt.Color(153, 255, 153));
         btn_editar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/editar.png"))); // NOI18N
@@ -204,7 +204,7 @@ public class RegistroHorario extends javax.swing.JFrame {
                 btn_editarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 70, 50));
+        getContentPane().add(btn_editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 420, 70, 50));
 
         btn_actualizar.setBackground(new java.awt.Color(153, 255, 153));
         btn_actualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/modificar_1.png"))); // NOI18N
@@ -213,7 +213,7 @@ public class RegistroHorario extends javax.swing.JFrame {
                 btn_actualizarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 400, 70, 50));
+        getContentPane().add(btn_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, 70, 50));
 
         btn_eliminar.setBackground(new java.awt.Color(153, 255, 153));
         btn_eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar_1.png"))); // NOI18N
@@ -222,10 +222,10 @@ public class RegistroHorario extends javax.swing.JFrame {
                 btn_eliminarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, 70, 50));
+        getContentPane().add(btn_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 420, 70, 50));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo-blanco.jpg"))); // NOI18N
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 400, 350));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 400, 370));
 
         tb_horario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
