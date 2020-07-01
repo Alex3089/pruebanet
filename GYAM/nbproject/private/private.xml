@@ -3,22 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Adrian/Desktop/NETBEANS/REPOS%20(GIT)/Prueba%201/GYAM/src/gyam/Home.java</file>
-            <file>file:/C:/Users/Adrian/Desktop/NETBEANS/REPOS%20(GIT)/Prueba%201/GYAM/src/gyam/RegistroHorario.java</file>
-            <file>file:/C:/Users/Adrian/Desktop/NETBEANS/REPOS%20(GIT)/Prueba%201/GYAM/src/conexion/Conexion.java</file>
-            <file>file:/C:/Users/Adrian/Desktop/NETBEANS/REPOS%20(GIT)/Prueba%201/GYAM/src/gyam/ControlGeneral.java</file>
-            <file>file:/C:/Users/Adrian/Desktop/NETBEANS/REPOS%20(GIT)/Prueba%201/GYAM/src/gyam/Entrada.java</file>
-            <file>file:/C:/Users/Adrian/Desktop/NETBEANS/REPOS%20(GIT)/Prueba%201/GYAM/src/gyam/InicioSesion.java</file>
-            <file>file:/C:/Users/Adrian/Desktop/NETBEANS/REPOS%20(GIT)/Prueba%201/GYAM/src/gyam/Registro.java</file>
-            <file>file:/C:/Users/Adrian/Desktop/NETBEANS/REPOS%20(GIT)/Prueba%201/GYAM/src/gyam/Reportes.java</file>
-=======
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/GYAM/src/gyam/Home.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/GYAM/src/gyam/Registro.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/GYAM/src/gyam/RegistroHorario.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/GYAM/src/gyam/InicioSesion.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/GYAM/src/gyam/Entrada.java</file>
->>>>>>> b1b345a2c6fcbf7968b91734b76a1b58c5f183ca
+            <file>file:/C:/Users/DELL/Documents/PROYECTO%20MARTINA/pruebanet/GYAM/src/gyam/Entrada.java</file>
+            <file>file:/C:/Users/DELL/Documents/PROYECTO%20MARTINA/pruebanet/GYAM/src/gyam/InicioSesion.java</file>
+            <file>file:/C:/Users/DELL/Documents/PROYECTO%20MARTINA/pruebanet/GYAM/src/gyam/ControlGeneral.java</file>
+            <file>file:/C:/Users/DELL/Documents/PROYECTO%20MARTINA/pruebanet/GYAM/src/conexion/Conexion.java</file>
+            <file>file:/C:/Users/DELL/Documents/PROYECTO%20MARTINA/pruebanet/GYAM/src/gyam/Home.java</file>
+            <file>file:/C:/Users/DELL/Documents/PROYECTO%20MARTINA/pruebanet/GYAM/src/gyam/RegistroHorario.java</file>
+            <file>file:/C:/Users/DELL/Documents/PROYECTO%20MARTINA/pruebanet/GYAM/src/gyam/Reportes.java</file>
+            <file>file:/C:/Users/DELL/Documents/PROYECTO%20MARTINA/pruebanet/GYAM/src/gyam/Registro.java</file>
         </group>
     </open-files>
 </project-private>

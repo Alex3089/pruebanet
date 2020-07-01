@@ -50,11 +50,12 @@ public class ControlGeneral extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fn_blanco.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 1000, 60));
 
-        jLabel6.setText("jLabel6");
+        jLabel6.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        jLabel6.setText("CONTROL DE ASISTENCIAS");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo-blanco.jpg"))); // NOI18N
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 500, 330));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 960, 190));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo_azul.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 540));
